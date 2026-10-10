@@ -519,7 +519,7 @@ section {
     opacity: 0.75;
 }
 
-/* Секция преимуществ (вместо статистики) */
+/* Секция преимуществ */
 .advantages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -729,7 +729,7 @@ footer {
             <h1>Играй в <span>Minecraft</span> по-новому</h1>
             <p>Grom Client — это мощный игровой лаунчер с модами, шейдерами, ресурспаками и встроенным ИИ-ассистентом. Всё в одном месте, в одном клике от тебя.</p>
             <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary">⬇ Скачать бесплатно</a>
+                <a href="https://github.com/B0DR0DEV/grom-client-site/releases/download/Realise/GromClientSetup.exe" class="btn btn-primary">⬇ Скачать бесплатно</a>
                 <a href="#features" class="btn btn-secondary">Узнать больше</a>
             </div>
         </div>
@@ -855,12 +855,12 @@ footer {
     <div class="download-card">
         <h2>Готов начать? <span>Скачай Grom Client</span></h2>
         <p>Бесплатный игровой лаунчер для Minecraft с полным набором функций. Установка занимает меньше минуты.</p>
-        <a href="#" class="download-btn" onclick="startDownload(event)">
+        <a href="https://github.com/B0DR0DEV/grom-client-site/releases/download/Realise/GromClientSetup.exe" class="download-btn">
             ⬇ Скачать Grom Client
         </a>
         <div class="download-info">
             <span>💻 Windows 7/10/11</span>
-            <span>📦 ~85 МБ</span>
+            <span>📦 ~137 МБ</span>
             <span>🆓 Бесплатно</span>
             <span>🔒 Безопасно</span>
         </div>
@@ -884,23 +884,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.feature-card').forEach(card => observer.observe(card));
-
-// Кнопка скачивания
-function startDownload(e) {
-    e.preventDefault();
-    const btn = e.currentTarget;
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '⏳ Подготовка...';
-    btn.style.pointerEvents = 'none';
-    
-    setTimeout(() => {
-        btn.innerHTML = '✅ Скачивание началось!';
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style.pointerEvents = 'auto';
-        }, 2500);
-    }, 1200);
-}
 
 // Плавный скролл
 document.querySelectorAll('a[href^="#"]').forEach(link => {
